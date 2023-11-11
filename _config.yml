@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: “浮思”
-subtitle: '浮浮沉沉，思绪如云'
-description: '生活、技术、随笔、思考、感悟、分享、记录、成长、独立开发'
+title: 浮思
+subtitle: 浮浮沉沉，思绪如云
+description: 生活、技术、随笔、思考、感悟、分享、记录、成长、独立开发
 keywords: ['生活', '技术', '随笔', '思考', '感悟', '分享', '记录', '成长', '独立开发']
 author: "Talljack"
 language: en
@@ -43,18 +43,29 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true
   preprocess: true
   line_number: true
   tab_replace: ''
+
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'      # default/prism-okaidia/prism-tomorrow/...
+  line_number: true     # default false
+  custom_css: ''        # default ''
+
+search:
+  path: search.xml
+  field: post
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -62,7 +73,7 @@ prismjs:
 # order_by: Posts order. (Order by date descending by default)
 index_generator:
   path: ''
-  per_page: 10
+  per_page: 12
   order_by: -date
 
 # Category & Tag
@@ -85,7 +96,7 @@ updated_option: 'mtime'
 
 # Pagination
 ## Set per_page to 0 to disable pagination
-per_page: 10
+per_page: 12
 pagination_dir: page
 
 # Include / Exclude file(s)
@@ -99,7 +110,30 @@ ignore:
 ## Themes: https://hexo.io/themes/
 theme: hexo-theme-matery
 
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
+
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+# support for emoji
+githubEmojis:
+  enable: true
+  className: github-emoji
+  inject: true
+  styles:
+  customEmojis:
+
+# RSS support
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content:
+  content_limit: 140
+  content_limit_delim: ' '
+  order_by: -date
