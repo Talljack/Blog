@@ -8,7 +8,7 @@ subtitle: 浮浮沉沉，思绪如云
 description: 生活、技术、随笔、思考、感悟、分享、记录、成长、独立开发
 keywords: ['生活', '技术', '随笔', '思考', '感悟', '分享', '记录', '成长', '独立开发']
 author: "Talljack"
-language: en
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -117,7 +117,9 @@ permalink_pinyin:
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: ''
+  type: git
+  repo: git@123.57.28.85:/home/git/blog.git
+  branch: main
 
 # support for emoji
 githubEmojis:
