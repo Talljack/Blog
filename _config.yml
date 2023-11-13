@@ -119,7 +119,7 @@ permalink_pinyin:
 deploy:
   type: git
   repo: git@123.57.28.85:/home/git/blog.git
-  branch: master
+  branch: main
 
 # support for emoji
 githubEmojis:
