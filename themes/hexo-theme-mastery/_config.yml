@@ -74,7 +74,7 @@ dream:
   enable: true
   showTitle: true
   title: 关于梦想
-  text: 其实我们并不是没有梦想，我们只是忘了，现在是时候把它找回来了。
+  text: 其实我们并不是没有梦想，只是忘了，现在是时候把它找回来了。
 
 # Whether to display the musics.
 # 是否在首页显示音乐.
@@ -188,7 +188,7 @@ reward:
   enable: true
   title: 你的赏识是我前进的动力
   wechat: /medias/reward/wechat.jpg
-  # alipay: /medias/reward/alipay.jpg
+  alipay: /medias/reward/alipay.jpg
 
 # Whether to activate the copyright information of the blog and author when copying the post content.
 # minCharNumber: Approve copyright information by copying at least how many characters.
@@ -316,7 +316,7 @@ gitalk:
 # the Gitment config，default disabled
 # Gitment 评论模块的配置，默认为不激活
 gitment:
-  enable: false
+  enable: true
   owner: "Talljack"
   repo: "https://github.com/Talljack/blog"
   oauth:
