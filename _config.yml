@@ -1,141 +1,72 @@
-# Hexo Configuration
-## Docs: https://hexo.io/docs/configuration.html
-## Source: https://github.com/hexojs/hexo/
+# Site Information
+title: Talljack
+description: "Hi, I'm Talljack, a Frontend Engineer from China, also dabbling a bit in Swift, Rust, Go, React. Believing in long-termism, I am passionate about open source and enjoy experimenting with new ideas."
+url: https://yugangcao.com
+repo: Talljack/blog
+lang: zh-CN
+timezone: Africa/El_Aaiun
 
-# Site
-title: 浮思
-subtitle: 浮浮沉沉，思绪如云
-description: 生活、技术、随笔、思考、感悟、分享、记录、成长、独立开发
-keywords: ['生活', '技术', '随笔', '思考', '感悟', '分享', '记录', '成长', '独立开发']
-author: "Talljack"
-language: zh-CN
-timezone: Asia/Shanghai
+# Social Media and External URLs
+github: Talljack
+zhihu: Talljack
+twitter: Yugangcao
+# v2ex: Talljack
+menu:
+  - title: "Categories"
+    url: "/categories.html"
+  - title: "About"
+    url: "/about"
+  - title: "Github"
+    url: "https://github.com/Talljack"
+  - title: "RSS"
+    url: "/feed.xml"
 
-# URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
-permalink_defaults:
-pretty_urls:
-  trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
-  trailing_html: false # Set to false to remove trailing '.html' from permalinks
+# SEO and Analytics
+google_analytics: G-KS7EDB6BRM
 
-# Directory
-source_dir: source
-public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
-code_dir: downloads/code
-i18n_dir: :lang
-skip_render:
-
-# Writing
-new_post_name: :title.md # File name of new posts
-default_layout: post
-titlecase: false # Transform title into titlecase
-external_link:
-  enable: true # Open external links in new tab
-  field: site # Apply to the whole site
-  exclude: ''
-filename_case: 0
-render_drafts: false
-post_asset_folder: false
-relative_link: false
+# Build Settings
+paginate: 10
+post_ext: md
+page_ext: md
+post_layout: post
+page_layout: page
+titlecase: true
 future: true
+highlighter: rouge
+markdown: kramdown
+permalink: /:year-:month-:day/:title.html
+sass:
+  sass_dir: _sass
+  style: compressed
 
-highlight:
-  enable: false
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
-  enable: true
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+collections:
+  posts:
+    output: true
+    permalink: /:year-:month-:day/:title.html
+  posts_en:
+    output: true
+    permalink: /en/:year-:month-:day/:title.html
 
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'default'      # default/prism-okaidia/prism-tomorrow/...
-  line_number: true     # default false
-  custom_css: ''        # default ''
+include: [".htaccess"]
+exclude:
+  [
+    "Gemfile",
+    "Gemfile.lock",
+    "README.md",
+    "LICENSE",
+    "package.json",
+    "node_modules",
+  ]
 
-search:
-  path: search.xml
-  field: post
+# Plugins
+plugins:
+  - jekyll-paginate
+  - jekyll-pdf-embed
+  - jekyll-sitemap
+  - jekyll-feed
 
-# Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
-index_generator:
-  path: ''
-  per_page: 12
-  order_by: -date
-
-# Category & Tag
-default_category: uncategorized
-category_map:
-tag_map:
-
-# Metadata elements
-## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
-meta_generator: true
-
-# Date / Time format
-## Hexo uses Moment.js to parse and display date
-## You can customize the date format as defined in
-## http://momentjs.com/docs/#/displaying/format/
-date_format: YYYY-MM-DD
-time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
-
-# Pagination
-## Set per_page to 0 to disable pagination
-per_page: 12
-pagination_dir: page
-
-# Include / Exclude file(s)
-## include:/exclude: options only apply to the 'source/' folder
-include: []
-exclude: []
-ignore:
-
-# Extensions
-## Plugins: https://hexo.io/plugins/
-## Themes: https://hexo.io/themes/
-theme: hexo-theme-mastery
-
-permalink_pinyin:
-  enable: true
-  separator: '-' # default: '-'
-
-# Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
-deploy:
-  type: git
-  repo: git@123.57.28.85:/home/git/blog.git
-  branch: main
-
-# support for emoji
-githubEmojis:
-  enable: true
-  className: github-emoji
-  inject: true
-  styles:
-  customEmojis:
-
-# RSS support
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-  hub:
-  content:
-  content_limit: 140
-  content_limit_delim: ' '
-  order_by: -date
+# Custom Site Settings
+showBuyCoffee: true
+payImage: //gw.alipayobjects.com/zos/k/vb/1.png
+assetUrl: //yugangcao.com/images/
+defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==

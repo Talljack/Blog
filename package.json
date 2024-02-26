@@ -1,34 +1,22 @@
 {
-  "name": "blog",
-  "version": "0.0.1",
-  "description": "My Blog",
-  "private": true,
+  "name": "talljack",
+  "author": "Talljack<yugang.cao12@gmail.com>",
+  "homepage": "https://yugangcao.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Talljack/blog"
+  },
+  "bugs": {
+    "url": "https://github.com/Talljack/blog/issues"
+  },
   "scripts": {
-    "build": "hexo generate",
-    "clean": "hexo clean",
-    "deploy": "hexo deploy",
-    "server": "hexo server"
+    "prep": "gem install bundler && bundle install",
+    "dev": "bundle exec jekyll serve --watch --trace",
+    "start": "npm run dev",
+    "build": "bundle exec jekyll build",
+    "min": "uglifyjs ./js/index.js -o ./js/index.min.js  --comments all"
   },
-  "hexo": {
-    "version": "6.3.0"
-  },
-  "dependencies": {
-    "hexo": "^6.3.0",
-    "hexo-deployer-git": "^4.0.0",
-    "hexo-filter-github-emojis": "^3.0.5",
-    "hexo-generator-archive": "^2.0.0",
-    "hexo-generator-category": "^2.0.0",
-    "hexo-generator-feed": "^3.0.0",
-    "hexo-generator-index": "^3.0.0",
-    "hexo-generator-search": "^2.4.3",
-    "hexo-generator-tag": "^2.0.0",
-    "hexo-permalink-pinyin": "^1.1.0",
-    "hexo-prism-plugin": "^2.3.0",
-    "hexo-renderer-ejs": "^2.0.0",
-    "hexo-renderer-marked": "^6.1.1",
-    "hexo-renderer-stylus": "^3.0.0",
-    "hexo-server": "^3.0.0",
-    "hexo-theme-landscape": "^1.0.0",
-    "hexo-wordcount": "^6.0.1"
+  "devDependencies": {
+    "uglify-js": "^3.17.4"
   }
 }
