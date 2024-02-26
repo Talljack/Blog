@@ -9,7 +9,7 @@
     {% if menu.url contains 'http://' or menu.url contains 'https://' %}
     <li class="header-item {{ class }}"><a href="{{ menu.url }}" target="_blank">{{ menu.title }}</a></li>
     {% else %}
-    <li class="header-item {{ class }}"><a href="{{ site.url }}{{ menu.url }}" target="_self">{{ menu.title }}</a></li>
+    <li class="header-item {{ class }}"><a href="{{ site.url }}{{ menu.url }}">{{ menu.title }}</a></li>
     {% endif %}
     {% endfor %}
     <!-- 语言切换链接 -->

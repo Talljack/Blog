@@ -1,6 +1,6 @@
 <div class="footer-wrapper">
   <footer role="contentinfo">
-    &copy; 2015~{{ site.time | date: '%Y' }}&nbsp;
+    &copy; 2013~{{ site.time | date: '%Y' }}&nbsp;
     <img src="https://cdn.fliggy.com/upic/a1THPC.png" class="github-icon" alt="github" />
     <a href="https://github.com/{{site.repo}}" rel="nofollow" target="_blank" class="need_dotted">
       {{site.repo}}
@@ -48,9 +48,10 @@
 <script>
   document.addEventListener("DOMContentLoaded", function () {
     var links = document.links;
+    const locationHostName = window.location.hostname.includes("www.") ? window.location.hostname.split("www.")[1] : window.location.hostname
     for (var i = 0; i < links.length; i++) {
       if (
-        links[i].hostname != window.location.hostname ||
+        links[i].hostname != locationHostName ||
         (links[i].href && links[i].href.indexOf("feed.xml") != -1)
       ) {
         links[i].target = "_blank";
