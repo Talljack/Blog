@@ -22,7 +22,7 @@ menu:
     url: "/feed.xml"
 
 # SEO and Analytics
-google_analytics: G-KS7EDB6BRM
+google_analytics: G-N5Z6V1Q5RK
 
 # Build Settings
 paginate: 10
@@ -66,7 +66,7 @@ plugins:
   - jekyll-feed
 
 # Custom Site Settings
-showBuyCoffee: true
+showBuyCoffee: false
 payImage: //gw.alipayobjects.com/zos/k/vb/1.png
 assetUrl: //yugangcao.com/images/
 defaultImage: data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
