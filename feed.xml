@@ -8,7 +8,7 @@ layout: none
     <title>Talljack Blog</title>
     <description>{% if site.description %}{{ site.description | xml_escape }}{% endif %}</description>
     <image>
-      <url>https://gw.alipayobjects.com/zos/k/hj/sLnZnY.jpg</url>
+      <url>https://raw.githubusercontent.com/Talljack/my-images/main/img/blog.png</url>
     </image>
     <link>{{ site.url }}</link>
     <atom:link href="{{ site.url }}/feed.xml" rel="self" type="application/rss+xml" />
