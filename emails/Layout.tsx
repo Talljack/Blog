@@ -47,10 +47,10 @@ export default function Layout({
                   href="https://yugangcao.com"
                   className="text-zinc-700 underline"
                 >
-                  <strong>Cali Castle</strong>
+                  <strong>Talljack</strong>
                 </Link>
                 <br />
-                开发者、设计师、细节控、创始人
+                前端,后端,开发者,独立,创新
               </Text>
               <Text className="text-center">
                 <Link
