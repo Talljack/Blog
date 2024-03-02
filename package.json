@@ -1,7 +1,8 @@
 {
-  "name": "cali.so",
+  "name": "blog",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@8.15.4",
   "scripts": {
     "build": "next build",
     "db:generate": "drizzle-kit generate:mysql",
