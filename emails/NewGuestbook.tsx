@@ -6,10 +6,10 @@ import { Button, Heading, Hr, Img, Section, Text } from './_components'
 import Layout from './Layout'
 
 const NewGuestbookEmail = ({
-  link = 'https://caliso/guestbook',
-  userFirstName = 'Cali',
-  userLastName = 'Castle',
-  userImageUrl = 'https://cali.so/icon.png',
+  link = 'https://yugangcao/guestbook',
+  userFirstName = 'Talljack',
+  userLastName = '',
+  userImageUrl = 'https://yugangcao.com/icon.png',
   commentContent = '*测试评论*\n- Wow wtf\n- Cool',
 }: {
   link?: string | null
@@ -53,8 +53,6 @@ const NewGuestbookEmail = ({
       <Section className="mb-[32px] mt-[32px] text-center">
         {link && (
           <Button
-            pX={20}
-            pY={12}
             className="rounded-xl bg-zinc-900 text-center text-[12px] font-semibold text-white no-underline"
             href={link}
           >

@@ -27,8 +27,6 @@ const ConfirmSubscriptionEmail = ({ link = 'link.com/confirm?fake-token' }) => {
       </Text>
       <Section className="mb-[32px] mt-[32px] text-center">
         <Button
-          pX={20}
-          pY={12}
           className="rounded-xl bg-zinc-900 text-center text-[12px] font-semibold text-white no-underline"
           href={link}
         >
