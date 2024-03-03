@@ -14,7 +14,9 @@ const DialogPortal = ({
   className,
   children,
   ...props
-}: DialogPrimitive.DialogPortalProps) => (
+}: DialogPrimitive.DialogPortalProps & { className: any }) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   <DialogPrimitive.Portal className={clsxm(className)} {...props}>
     <div className="fixed inset-0 z-50 flex items-start justify-center sm:items-center">
       {children}
@@ -41,7 +43,11 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 const DialogContent = React.forwardRef<
   React.ElementRef<typeof DialogPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof DialogPrimitive.Content>
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
 >(({ className, children, ...props }, ref) => (
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-expect-error
   <DialogPortal>
     <DialogOverlay />
     <DialogPrimitive.Content
