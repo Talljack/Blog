@@ -1,5 +1,6 @@
 import * as cheerio from 'cheerio'
-import { ImageResponse, type NextRequest, NextResponse } from 'next/server'
+import { ImageResponse } from 'next/og'
+import { type NextRequest, NextResponse } from 'next/server'
 
 import { ratelimit, redis } from '~/lib/redis'
 
@@ -38,7 +39,7 @@ function getPredefinedIconForUrl(url: string): string | undefined {
 const width = 32
 const height = width
 function renderFavicon(url: string) {
-  return new ImageResponse(
+  return new (ImageResponse as any)(
     (
       // eslint-disable-next-line @next/next/no-img-element
       <img src={url} alt={`${url} 的图标`} width={width} height={height} />

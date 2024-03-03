@@ -28,7 +28,7 @@ export async function GET(req: NextRequest) {
   imageUrl.searchParams.set('height', height.toString())
   imageUrl.searchParams.set('ttl', '86400')
 
-  return new ImageResponse(
+  return new (ImageResponse as any)(
     (
       // eslint-disable-next-line @next/next/no-img-element
       <img

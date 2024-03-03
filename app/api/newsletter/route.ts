@@ -47,7 +47,7 @@ export async function POST(req: NextRequest) {
     const token = crypto.randomUUID()
 
     if (env.NODE_ENV === 'production') {
-      await resend.sendEmail({
+      await resend.emails.send({
         from: emailConfig.from,
         to: parsed.email,
         subject: '来自 Talljack 的订阅确认',

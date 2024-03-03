@@ -1,7 +1,7 @@
 import { eq } from 'drizzle-orm'
 import { type Metadata } from 'next'
 import { notFound } from 'next/navigation'
-import { ReactMarkdown } from 'react-markdown/lib/react-markdown'
+import ReactMarkdown from 'react-markdown'
 
 import { Container } from '~/components/ui/Container'
 import { db } from '~/db'

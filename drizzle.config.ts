@@ -2,9 +2,11 @@ import * as dotenv from 'dotenv'
 import type { Config } from 'drizzle-kit'
 dotenv.config()
 
-export default {
+const config: Config = {
   driver: 'mysql2',
   schema: './db/schema.ts',
   out: './db/migrations',
-  dbCredentials: { connectionString: process.env.DATABASE_URL || '' },
-} satisfies Config
+  dbCredentials: { uri: process.env.DATABASE_URL || '' },
+}
+
+export default config

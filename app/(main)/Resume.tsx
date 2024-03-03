@@ -2,7 +2,7 @@ import Image, { type StaticImageData } from 'next/image'
 import React from 'react'
 
 import { BriefcaseIcon } from '~/assets'
-import baiduLogo from '~/assets/company/baidu.png'
+import baiduLogo from '~/assets/company/baidu.svg'
 import tusenLogo from '~/assets/company/tusimple.svg'
 
 type Resume = {

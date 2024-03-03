@@ -134,15 +134,12 @@ export async function POST(req: NextRequest, { params }: Params) {
         const {
           primaryEmailAddressId,
           emailAddresses,
-          imageUrl,
-          firstName,
-          lastName,
         } = await clerkClient.users.getUser(parentUserFromDb.userId)
         const primaryEmailAddress = emailAddresses.find(
           (emailAddress) => emailAddress.id === primaryEmailAddressId
         )
         if (primaryEmailAddress) {
-          await resend.sendEmail({
+          await resend.emails.send({
             from: emailConfig.from,
             to: primaryEmailAddress.emailAddress,
             subject: '👋 有人回复了你的评论',
