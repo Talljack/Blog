@@ -74,9 +74,6 @@ export default function SponsorsPage() {
         />
       </div>
       </div>
-      <div className="mt-16 sm:mt-20">
-        <Projects />
-      </div>
       <div className='flex center items-end gap-4 mt-16 sm:mt-20'>
         { Object.keys(sponsorsImages).map(sponsorKey => {
           return (
@@ -98,6 +95,9 @@ export default function SponsorsPage() {
         <a href="https://www.buymeacoffee.com/Talljack">
             <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Talljack&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
         </a>
+      </div>
+      <div className="mt-16 sm:mt-20">
+        <Projects />
       </div>
     </Container>
   )
