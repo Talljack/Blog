@@ -3,6 +3,7 @@ const config = {
   singleQuote: true,
   trailingComma: 'es5',
   semi: false,
+  tabWidth: 2,
   plugins: [
     require.resolve('prettier-plugin-tailwindcss'),
     require.resolve('prettier-plugin-packagejson'),
