@@ -1,6 +1,6 @@
 ## 我的个人网站
 
-用博客来记录自己的思考、成长以及技术问题。
+我也用博客来记录自己的思考、成长以及技术问题。
 
 ### 技术栈
 
@@ -11,7 +11,7 @@
 - [Framer Motion](https://www.framer.com/motion/)
 - [Radix UI](https://www.radix-ui.com/)
 - [Clerk](https://clerk.com/)
-- [PlanetScale](https://planetscale.com/)
+- [Neon](https://console.neon.tech/)
 - [Drizzle ORM](https://orm.drizzle.team/)
 - [Sanity](https://www.sanity.io/)
 - [React Email](https://react.email)
@@ -32,6 +32,6 @@ pnpm build
 
 通过 [Vercel](https://vercel.com/) 一键部署。
 
-### 搭建网站
+### 如何搭建
 
 依赖 [https://cali.so/](https://cali.so/) 的进行开源搭建，感谢。
