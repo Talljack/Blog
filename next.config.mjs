@@ -27,6 +27,9 @@ const nextConfig = {
       return []
     }
   },
+  experimental: {
+    taint: true,
+  },
 
   rewrites() {
     return [
