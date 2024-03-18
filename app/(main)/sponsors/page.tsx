@@ -74,13 +74,13 @@ export default function SponsorsPage() {
         />
       </div>
       </div>
-      <div className='flex center items-end gap-4 mt-16 sm:mt-20'>
+      <div className='mt-16 sm:mt-20 grid items-end justify-items-start grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3'>
         { Object.keys(sponsorsImages).map(sponsorKey => {
           return (
-            <div key={sponsorKey} className='flex flex-wrap w-[300px] justify-center'>
+            <div key={sponsorKey} className='flex flex-col items-center lg:w-72 sm:w-36'>
                 <Image
-                    width={300}
-                    height={450}
+                    width={200}
+                    height={300}
                     src={sponsorsImages[sponsorKey as keyof typeof sponsorsImages]}
                     alt={sponsorKey}
                     priority
@@ -93,7 +93,13 @@ export default function SponsorsPage() {
         )
         }) }
         <a href="https://www.buymeacoffee.com/Talljack">
-            <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Talljack&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" />
+          <picture>
+            <img
+              className="lg:w-72 sm:w-36"
+              alt="Buy me a coffee"
+              src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=Talljack&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+            />
+          </picture>
         </a>
       </div>
       <div className="mt-16 sm:mt-20">
