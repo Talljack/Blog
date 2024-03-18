@@ -22,6 +22,7 @@ function NavItem({
     <li>
       <Link
         href={href}
+        target={href.startsWith('http') ? '_blank' : undefined}
         className={clsxm(
           'relative block whitespace-nowrap px-3 py-2 transition',
           isActive
