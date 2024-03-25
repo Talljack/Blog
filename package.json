@@ -78,6 +78,7 @@
     "rss": "^1.2.2",
     "sanity": "^3.35.2",
     "sanity-plugin-media": "^2.2.5",
+    "styled-components": "^6.1.8",
     "valtio": "^1.13.2",
     "zod": "^3.22.4"
   },
@@ -86,7 +87,6 @@
     "@tailwindcss/typography": "^0.5.10",
     "@types/eslint": "^8.56.6",
     "@types/node": "^20.11.30",
-    "@types/prettier": "^3.0.0",
     "@types/react": "18.2.69",
     "@types/react-dom": "^18.2.22",
     "@types/react-syntax-highlighter": "^15.5.11",
