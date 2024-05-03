@@ -1,4 +1,4 @@
-import { authMiddleware } from '@clerk/nextjs'
+import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 import { get } from '@vercel/edge-config'
 import { type NextRequest, NextResponse } from 'next/server'
 
@@ -50,9 +50,7 @@ async function beforeAuthMiddleware(req: NextRequest) {
   return NextResponse.next()
 }
 
-export default authMiddleware({
-  beforeAuth: beforeAuthMiddleware,
-  publicRoutes: [
+const isPublicRoutes = createRouteMatcher([
     '/',
     '/api(.*)',
     '/blog(.*)',
@@ -61,9 +59,15 @@ export default authMiddleware({
     '/projects',
     '/guestbook',
     '/newsletters(.*)',
+    '/interview',
     '/about',
     '/rss',
     '/feed',
     '/ama',
-  ],
+]);
+
+export default clerkMiddleware((auth, req) => {
+  if (isPublicRoutes(req)) {
+    return beforeAuthMiddleware(req)
+  }
 })
