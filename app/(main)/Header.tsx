@@ -360,7 +360,7 @@ function UserInfo() {
         >
           <Tooltip.Provider disableHoverableContent>
             <Tooltip.Root open={tooltipOpen} onOpenChange={setTooltipOpen}>
-              <SignInButton mode="modal" redirectUrl={url(pathname).href}>
+              <SignInButton mode="modal" fallbackRedirectUrl={url(pathname).href}>
                 <Tooltip.Trigger asChild>
                   <button
                     type="button"

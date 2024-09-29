@@ -44,6 +44,7 @@ export function BlogReactions({
       // Optimistic update
       setCachedReactions((prev) => {
         const next = [...prev]
+        // @ts-expect-error - next is readonly
         next[index]++
         return next
       })

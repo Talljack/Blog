@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import type { Metadata } from 'next/types'
 import Balancer from 'react-wrap-balancer'
 
 import { Projects } from '~/app/(main)/projects/Projects'
