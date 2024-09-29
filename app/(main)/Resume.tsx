@@ -14,14 +14,22 @@ type Resume = {
 }
 const resume: Resume[] = [
   {
-    company: '图森未来有限公司',
-    title: '高级前端工程师',
-    logo: tusenLogo,
-    start: '2020.07',
+    company: '元戎启行',
+    title: '全栈工程师',
+    // @ts-expect-error - next is readonly
+    logo: "https://media.licdn.com/dms/image/v2/D4D0BAQHXrtYRlcwEbA/company-logo_200_200/company-logo_200_200/0/1701078997726/deeproute_ai_ltd_logo?e=2147483647&v=beta&t=cHEfZYCrwlM7UT5XSzIT6bVyrBlW4HcvOHqJIutYh44",
+    start: '2024.05',
     end: {
       label: '至今',
       dateTime: new Date().getFullYear(),
     },
+  },
+  {
+    company: '图森未来有限公司',
+    title: '高级前端工程师',
+    logo: tusenLogo,
+    start: '2020.07',
+    end: "2024.03"
   },
   {
     company: '百度公司',
@@ -60,6 +68,8 @@ export function Resume() {
                 alt={role.company}
                 className="h-8 w-8 rounded-full"
                 unoptimized
+                width={32}
+                height={32}
               />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">

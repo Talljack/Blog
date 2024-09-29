@@ -29,7 +29,6 @@ function flattenBlocks(blocks: SanityBlock[]): string[] {
 }
 
 export default function ReadingTimeInput(props: NumberInputProps) {
-  const value = React.useDeferredValue(props.value)
   const { schemaType } = props
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
@@ -39,6 +38,8 @@ export default function ReadingTimeInput(props: NumberInputProps) {
     // find the member that has the key of "body"
     const bodyMember = (members as FieldMember[]).find((member) => {
       if (member.kind === 'field') {
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-expect-error
         return member.name === schemaType.options?.source ?? 'body'
       }
       return false
@@ -51,6 +52,8 @@ export default function ReadingTimeInput(props: NumberInputProps) {
       flattenBlocks(bodyMember.field.value as SanityBlock[]).join('\n')
     )
     props.onChange(set(rt.minutes))
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
   }, [members, props, schemaType.options?.source])
 
   return (

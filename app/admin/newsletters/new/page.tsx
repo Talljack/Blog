@@ -9,6 +9,7 @@ import { emailConfig } from '~/config/email'
 import { db } from '~/db'
 import { newsletters, subscribers } from '~/db/schema'
 import NewslettersTemplate from '~/emails/NewslettersTemplate'
+import { env } from '~/env.mjs'
 import { resend } from '~/lib/mail'
 
 extendDateTime({
@@ -43,7 +44,7 @@ export default function CreateNewsletterPage() {
       subject: data.subject,
       from: emailConfig.from,
       to: 'yugang.cao12@gmail.com',
-      reply_to: emailConfig.from,
+      replyTo: env.SITE_NOTIFICATION_EMAIL_TO,
       bcc: Array.from(subscriberEmails),
       react: NewslettersTemplate({
         subject: data.subject,

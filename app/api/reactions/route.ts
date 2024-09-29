@@ -58,6 +58,7 @@ export async function PATCH(req: NextRequest) {
     current = [0, 0, 0, 0]
   }
   // increment the array value at the index
+  // @ts-expect-error - next is readonly
   current[parseInt(index)] += 1
 
   await redis.set(key, current)
