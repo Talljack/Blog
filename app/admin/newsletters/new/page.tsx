@@ -9,8 +9,8 @@ import { emailConfig } from '~/config/email'
 import { db } from '~/db'
 import { newsletters, subscribers } from '~/db/schema'
 import NewslettersTemplate from '~/emails/NewslettersTemplate'
-import { resend } from '~/lib/mail'
 import { env } from '~/env.mjs'
+import { resend } from '~/lib/mail'
 
 extendDateTime({
   timezone: true,
