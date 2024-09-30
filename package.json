@@ -80,7 +80,7 @@
     "sanity-plugin-media": "^2.2.5",
     "styled-components": "^6.1.8",
     "valtio": "^2.0.0",
-    "zod": "^3.23.4"
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@headlessui/tailwindcss": "^0.2.0",
