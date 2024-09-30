@@ -27,7 +27,7 @@ const config = {
   parserOptions: {
     project: path.join(__dirname, 'tsconfig.json'),
   },
-  ignorePatterns: ['**/*.md'],
+  ignorePatterns: ['**/*.md', 'dist'],
   plugins: [
     'turbo',
     '@typescript-eslint',
