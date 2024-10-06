@@ -13,7 +13,17 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['cdn.sanity.io', 'img.buymeacoffee.com'],
+    remotePatterns: [
+      {
+        hostname: 'web-hub-seven.vercel.app',
+      },
+      {
+        hostname: 'img.buymeacoffee.com',
+      },
+      {
+        hostname: 'cdn.sanity.io',
+      },
+    ],
   },
 
   typescript: {
